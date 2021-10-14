@@ -1,0 +1,6 @@
+## Interface: 90100
+## Title: Ding Screenshot
+## Author: Bigdadda06
+## Version: 1.0
+
+DingScreenshot.lua
