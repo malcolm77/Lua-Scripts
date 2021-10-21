@@ -1,0 +1,1 @@
+/run local c,i,num,v=0;for slot=1,GetContainerNumSlots(0)do i={GetContainerItemInfo(0,slot)}num=i[7]if num then v={GetItemInfo(num)}qty=i[2]c=c+v[11]*qty;UseContainerItem(0,slot)print(num,qty)end;end;print(GetCoinText(c))
