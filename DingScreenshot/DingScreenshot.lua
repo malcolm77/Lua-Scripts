@@ -1,9 +1,5 @@
 local parentframe = CreateFrame("FRAME", "dingscreenshot", UIParent)
 
-local function WaitEvent()
-	C_Timer.After(2, function() ScreenshotEvent() end)
-end
-
 function ScreenshotEvent()
 	RequestTimePlayed()
 	C_Timer.After(2, function() Screenshot() end)
@@ -12,5 +8,5 @@ end
 
 
 parentframe:RegisterEvent("PLAYER_LEVEL_UP")
---parentframe:RegisterEvent("PLAYER_ENTERING_WORLD")
+parentframe:RegisterEvent("ACHIEVEMENT_EARNED")
 parentframe:SetScript("OnEvent", ScreenshotEvent)
